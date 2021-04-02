@@ -1,2 +1,2 @@
-# C++ Object Orinted Programming
+# C++ Object Oriented Programming
 Learning about Abstract Classes
