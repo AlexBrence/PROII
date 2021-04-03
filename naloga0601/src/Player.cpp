@@ -9,11 +9,12 @@ Player::Player(const float x, const float y, const float width, const float heig
 
 
 void Player::draw() const { 
-    std::cout << "x: " << x
+    std::cout << "\nx: " << x
               << "\ny: " << y
               << "\nwidth: " << width
               << "\nheight: " << height
-              << "\n";
+              << "\nname: " << name 
+              << "\n------------\n";
 }
 
 
