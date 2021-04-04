@@ -9,9 +9,10 @@ class TaskGroup : public Task {
         std::vector<Task*> tasks;
 
     public:
-        TaskGroup(std::vector<Task*> tasksVec);
-        ~TaskGroup();
+        TaskGroup(const std::vector<Task*>& tasksVec);
 
+        DateTime getDateTime() const override {};
+        std::string getName() const override {};
         std::string toString() const override;
 };
 

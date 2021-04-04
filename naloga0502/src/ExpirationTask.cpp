@@ -11,10 +11,17 @@ std::string ExpirationTask::getName() const {
     return name;
 }
 
+
+DateTime ExpirationTask::getDateTime() const {
+    return Task::added;
+}
+
 std::string ExpirationTask::toString() const {
     std::stringstream ss;
 
-    ss << Task::toString() << "\n"
+    ss << "-> " << name << "\n"
+       << description << "\n"
+       << "[ " << added.toString() << " ]\n"
        << assignee << "\n"
        << "[ " << deadline.toString() << " ]\n"
        << state;

@@ -2,6 +2,7 @@
 
 #include "Board.h"
 #include "Category.h"
+#include "DateTime.h"
 #include "ExpirationTask.h"
 #include "TaskGroup.h"
 
@@ -20,12 +21,14 @@ int main() {
     board.addCategory(Category("MAT"));
 
     // Tu bo napaka
-    if(!board.addTask("Algoritmi", new Task("Vaja 4 - Binarno Iskalno Drevo", "Implementiraj svoje binarno iskalno drevo ter potrebne funkcije.", DateTime("12/03/2021 09:00:00")))) {
+    if(!board.addTask("Algoritmi", new ExpirationTask("Vaja 4 - Binarno Iskalno Drevo", "Implementiraj svoje binarno iskalno drevo ter potrebne funkcije.", DateTime("12/03/2021 09:00:00"), 
+                                                      "Dragana Bozovic", DateTime("24/4/2021 19:00:00"), "TODO"))) {
         napaka();
     };
 
     // Tu naprej je ok
-    if(!board.addTask("APS", new Task("Vaja 4 - Binarno Iskalno Drevo", "Implementiraj svoje binarno iskalno drevo ter potrebne funkcije.", DateTime("12/03/2021 09:00:00")))) {
+    if(!board.addTask("APS", new ExpirationTask("Vaja 4 - Binarno Iskalno Drevo", "Implementiraj svoje binarno iskalno drevo ter potrebne funkcije.", DateTime("12/03/2021 09:00:00"), 
+                                                "Kaja Kelc", DateTime("15/4/2021 12:00"), "DONE"))) {
         napaka();
     };
 
@@ -51,7 +54,8 @@ int main() {
     }
 
 
-    if(!board.addTask("PB", new Task("Vaja 2 - SQL Skripta", "Rocno pretvori E-R Model v skripto.", DateTime("20/03/2021 13:30:00")))) {
+    if(!board.addTask("PB", new ExpirationTask("Vaja 2 - SQL Skripta", "Rocno pretvori E-R Model v skripto.", DateTime("20/03/2021 13:30:00"), 
+                                               "Tin Kelc", DateTime("20/4/2021 11:11:00"), "TODO"))) {
         napaka();
     }
     if(!board.addTask("PB", new ExpirationTask("Vaja 3 - SQL Povprasevanja", "Iz skripte zdaj s pomocjo 6-ih SQL vprasanj pridobi potrebne podatke.", DateTime("26/03/2021 13:00:00"), 
@@ -59,10 +63,12 @@ int main() {
         napaka();
     }
 
-    if(!board.addTask("MAT", new Task("Sklop 2 - Funkcije in Lastnosti Funkcij", "Resi vse primere iz tega sklopa.", DateTime("01/03/2021 09:55:00")))) {
+    if(!board.addTask("MAT", new ExpirationTask("Sklop 2 - Funkcije in Lastnosti Funkcij", "Resi vse primere iz tega sklopa.", DateTime("01/03/2021 09:55:00"), 
+                                                "Alex Brence", DateTime("12/5/2021 22:00:00"), "DOING"))) {
         napaka();
     }
-    if(!board.addTask("MAT", new Task("Sklop 3 - Zaporedja", "Resi vse primere iz tega sklopa ter dodatne naloga iz prejsnjih kolokvijev.", DateTime("05/03/2021 09:55:00")))) {
+    if(!board.addTask("MAT", new ExpirationTask("Sklop 3 - Zaporedja", "Resi vse primere iz tega sklopa ter dodatne naloga iz prejsnjih kolokvijev.", DateTime("05/03/2021 09:55:00"), 
+                                                "Primoz Peterka", DateTime("19/6/2021 12:00:00"), "DOING"))) {
         napaka();
     }
 
@@ -96,8 +102,8 @@ int main() {
 
     std::vector<Task*> tasks;
     tasks.emplace_back(new ExpirationTask("Vaja 3 - SQL Povprasevanja", "Iz skripte zdaj s pomocjo 6-ih SQL vprasanj pridobi potrebne podatke.", DateTime("26/03/2021 13:00:00"), "Jakob Veniger", DateTime("15/04/2021 23:59:00"), "TODO"));
-    tasks.emplace_back(new Task("Sklop 2 - Funkcije in Lastnosti Funkcij", "Resi vse primere iz tega sklopa.", DateTime("01/03/2021 09:55:00")));
-    tasks.emplace_back(new Task("Sklop 3 - Zaporedja", "Resi vse primere iz tega sklopa ter dodatne naloga iz prejsnjih kolokvijev.", DateTime("05/03/2021 09:55:00")));
+    tasks.emplace_back(new ExpirationTask("Sklop 2 - Funkcije in Lastnosti Funkcij", "Resi vse primere iz tega sklopa.", DateTime("01/03/2021 09:55:00"), "Alex Brence", DateTime("12/5/2021 22:00:00"), "DOING"));
+    tasks.emplace_back(new ExpirationTask("Sklop 3 - Zaporedja", "Resi vse primere iz tega sklopa ter dodatne naloga iz prejsnjih kolokvijev.", DateTime("05/03/2021 09:55:00"), "Primoz Peterka", DateTime("19/6/2021 12:00:00"), "DOING"));
 
     TaskGroup *importantTasks = new TaskGroup(tasks);
 

@@ -3,6 +3,7 @@
 #include <string>
 #include "DateTime.h"
 
+// ABSTRACT CLASS
 class Task {
     protected:
         std::string name, description;
@@ -11,11 +12,11 @@ class Task {
     public:
         Task();
         Task(const std::string& name, const std::string& description, const DateTime& added);
-        virtual ~Task();
+        virtual ~Task() = default;
 
-        DateTime getDateTime() const;
-        virtual std::string getName() const;
-        virtual std::string toString() const;
+        virtual DateTime getDateTime() const = 0;
+        virtual std::string getName() const = 0;
+        virtual std::string toString() const = 0;
 };
 
 

@@ -10,24 +10,3 @@ Task::Task(const std::string& name, const std::string& description, const DateTi
 }
 
 
-Task::~Task() {
-}
-
-DateTime Task::getDateTime() const {
-    return added;
-}
-
-std::string Task::getName() const {
-    return name;
-}
-
-
-std::string Task::toString() const {
-    std::stringstream ss;
-
-    ss << "-> " << name << "\n" 
-       << description << "\n"
-       << "[ " << added.toString() << " ]";
-
-    return ss.str();
-}

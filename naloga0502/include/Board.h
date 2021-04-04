@@ -14,7 +14,6 @@ class Board {
 
         void addCategory (const Category& category);
         bool addTask(const std::string& categoryName, Task* task);
-        // std::vector<Category> getCategories() const;
 
         void agenda(const Date& date) const;
         void printCategories() const;

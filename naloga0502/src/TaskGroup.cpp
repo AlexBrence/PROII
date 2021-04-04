@@ -3,14 +3,10 @@
 #include <sstream>
 
 
-TaskGroup::TaskGroup(std::vector<Task*> tasksVector) {
-    for (const auto& tv : tasksVector) {
-        tasks.push_back(tv);
-    }
+TaskGroup::TaskGroup(const std::vector<Task*>& tasksVector) {
+    tasks = std::move(tasksVector);
 }
 
-TaskGroup::~TaskGroup() {
-}
 
 std::string TaskGroup::toString() const {
     std::stringstream ss;

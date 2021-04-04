@@ -20,9 +20,6 @@ bool Board::addTask(const std::string& categoryName, Task *task) {
     return false;
 }
 
-// std::vector<Category> Board::getCategories () const {
-//     return categories;
-// }
 
 void Board::agenda(const Date& date) const {
     std::vector<Task*> tasks;

@@ -14,7 +14,8 @@ class ExpirationTask : public Task {
                        const std::string& assignee, const DateTime& deadline, const std::string& state);
 
         
-        std::string getName() const override;
+        DateTime getDateTime() const;
+        std::string getName() const;
         std::string toString() const override;
 };
 
