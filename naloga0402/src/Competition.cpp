@@ -98,3 +98,4 @@ std::vector<Competition*> Competition::getCompetitionsBetween(const std::vector<
     } 
     return competitionsBetween;
 }
+

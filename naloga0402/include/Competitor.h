@@ -1,4 +1,5 @@
 #pragma once
+
 #include <string>
 #include <vector>
 
@@ -21,5 +22,3 @@ class Competitor {
         void addResult(const Result& result);
         std::string toString() const;
 };
-
-

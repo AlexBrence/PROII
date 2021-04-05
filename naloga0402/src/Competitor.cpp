@@ -39,3 +39,4 @@ std::string Competitor::toString() const {
 
     return ss.str();
 }
+
