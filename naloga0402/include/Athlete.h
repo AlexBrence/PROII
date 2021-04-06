@@ -15,20 +15,22 @@ class Athlete {
         Athlete(const std::string& firstName, const std::string& lastName, const std::string& country, const double height, const double weight);
         virtual ~Athlete() = default;
 
-        virtual std::string getFirstName() const = 0;
-        virtual std::string getLastName() const = 0;
-        virtual std::string getCountry() const = 0;
-        virtual double getHeight() const = 0;
-        virtual double getWeight() const = 0;
+        virtual std::string getFirstName() const;
+        virtual std::string getLastName() const;
+        virtual std::string getCountry() const;
+        virtual double getHeight() const;
+        virtual double getWeight() const;
 
-        virtual void setFirstName(const std::string& firstName) = 0;
-        virtual void setLastName(const std::string& lastName) = 0;
-        virtual void setCountry(const std::string& country) = 0;
-        virtual void setHeight(const double height) = 0;
-        virtual void setWeight(const double weight) = 0;
+        virtual void setFirstName(const std::string& firstName);
+        virtual void setLastName(const std::string& lastName);
+        virtual void setCountry(const std::string& country);
+        virtual void setHeight(const double height);
+        virtual void setWeight(const double weight);
 
-        virtual std::string toString() const = 0;
-        virtual void print() const = 0;
+        virtual std::string toString() const;
+        virtual void print() const;
+
+        virtual unsigned int getNumberOfMedals() const = 0;
 };
 
 

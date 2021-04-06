@@ -29,10 +29,9 @@ int main() {
 
     // Add 6 competitors in the first competition
     for (int i = 0; i < 6; i++) {
-        competitions[0]->addCompetitor(new Runner(names[randomInfoFromVector(rd)], surnames[randomInfoFromVector(rd)], 
-                    countries[randomInfoFromVector(rd)], randomHeight(rd), randomWeight(rd), distance[randomInfoFromVector(rd)]));
+        competitions[0]->addCompetitor(new Runner(names[randomInfoFromVector(rd)], surnames[randomInfoFromVector(rd)], countries[randomInfoFromVector(rd)], 
+                                                  randomHeight(rd), randomWeight(rd), distance[randomInfoFromVector(rd)], randomInfoFromVector(rd)));
     }
-
 
     // Add same athletes form 1st competition to other 2 competitions
     std::vector<Competitor> competitors = competitions[0]->getCompetitors();
@@ -43,7 +42,6 @@ int main() {
             competitions[i]->addCompetitor(a);
         }
     }
-
 
     // The races end here
     for (const auto& c : competitions) {
@@ -63,8 +61,6 @@ int main() {
     for (const auto& c : competitionsBetweenDate) {
         std::cout << c->toString() << "\n";
     }
-
-
 
     // Delete the athletes
     for (const auto& c : competitors) {
