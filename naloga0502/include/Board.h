@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include "Category.h"
+#include "DateTime.h"
 
 class Board {
     private:
@@ -19,5 +20,6 @@ class Board {
         void printCategories() const;
         void numberOfTasksInEachCategory() const;
         bool removeTask(const std::string& categoryName, const std::string& taskName);
+        void printTasksBeforeDeadline(const DateTime& datetime) const;
         std::string toString() const;
 };

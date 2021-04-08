@@ -14,10 +14,11 @@ class Category {
         Category(const std::string& name);
         ~Category();
 
-        void addTask(Task* task);
         std::string getName() const;
         std::vector<Task*> getTasks() const;
         int getNumberOfTasks() const;
+
+        void addTask(Task* task);
         bool removeTask(Task* task);
         std::string toString() const;
 };

@@ -70,6 +70,21 @@ bool Board::removeTask(const std::string& categoryName, const std::string& taskN
 }
 
 
+void Board::printTasksBeforeDeadline(const DateTime& deadline) const {
+    std::vector<Task*> tasks;
+
+    for (const auto& c : categories) {
+        tasks = c.getTasks();
+        std::cout << c.getName() << "\n";
+        for (const auto& t : tasks) {
+            if (t->isBeforeDeadline(deadline)) {
+                std::cout << t->toString() << "\n\n";
+            }
+        }
+    }
+}
+
+
 std::string Board::toString() const {
     std::stringstream ss;
 

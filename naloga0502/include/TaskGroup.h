@@ -11,8 +11,7 @@ class TaskGroup : public Task {
     public:
         TaskGroup(const std::vector<Task*>& tasksVec);
 
-        DateTime getDateTime() const override {};
-        std::string getName() const override {};
+        bool isBeforeDeadline(const DateTime& deadline) const override { return false; }
         std::string toString() const override;
 };
 

@@ -7,21 +7,18 @@ ExpirationTask::ExpirationTask(const std::string& name, const std::string& descr
 }
 
 
-std::string ExpirationTask::getName() const {
-    return name;
+bool ExpirationTask::isBeforeDeadline(const DateTime& deadline) const {
+    if (this->deadline.isBefore(deadline)) {
+        return true;
+    }
+    return false;
 }
 
-
-DateTime ExpirationTask::getDateTime() const {
-    return Task::added;
-}
 
 std::string ExpirationTask::toString() const {
     std::stringstream ss;
 
-    ss << "-> " << name << "\n"
-       << description << "\n"
-       << "[ " << added.toString() << " ]\n"
+    ss << Task::toString()
        << assignee << "\n"
        << "[ " << deadline.toString() << " ]\n"
        << state;

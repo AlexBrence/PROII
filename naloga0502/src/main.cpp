@@ -45,7 +45,7 @@ int main() {
 
 
     if(!board.addTask("ARA", new ExpirationTask("Vaja 3 - Binarni Radix Sort", "Implementiraj binarni radix sort, za sortitanje uporabi Counting sort.", DateTime("16/03/2021 09:00:00"),
-                                                "Alex Brence", DateTime("32/03/2021 23:59:00"), "DONE"))) {
+                                                "Alex Brence", DateTime("30/03/2021 23:59:00"), "DONE"))) {
         napaka();
     }
     if(!board.addTask("ARA", new ExpirationTask("Vaja 4 - Quick Sort", "Implementiraj hitro urejanje brez pomoci knjiznic.", DateTime("26/03/2021 09:00:00"), 
@@ -77,7 +77,7 @@ int main() {
 
     // Agenda method
     Date date(26, 3, 2021);
-    std::cout << "/***** TASKI NA PODAN DATUM " << date.toString() << " *****/\n";
+    std::cout << "/***** Tasks on given date " << date.toString() << " *****/\n";
     board.agenda(date);
 
 
@@ -85,18 +85,26 @@ int main() {
     board.printCategories();
 
     // Count number of tasks in each category
+    std::cout << "------------------------------------------\n";
     std::cout << "Number of tasks in each category: ";
     board.numberOfTasksInEachCategory();
 
     // Remove a task
+    std::cout << "------------------------------------------\n";
     std::cout << "\nAfter deleting a task in MAT category\n";
     if (!board.removeTask("MAT", "Sklop 2 - Funkcije in Lastnosti Funkcij")) {
         napaka();
     }
 
     // Count number of tasks in each category
+    std::cout << "------------------------------------------\n";
     std::cout << "Number of tasks in each category: ";
     board.numberOfTasksInEachCategory();
+
+    DateTime deadline("15/4/2021 23:59:59");
+    std::cout << "------------------------------------------\n";
+    std::cout << "\n\nTasks before deadline " << deadline.toString() << "\n";
+    board.printTasksBeforeDeadline(deadline);
 
 
 
@@ -109,6 +117,7 @@ int main() {
 
     board.addCategory(Category("IMPORTANT"));
     board.addTask("IMPORTANT", importantTasks);
+    std::cout << "------------------------------------------\n";
     std::cout << board.toString() << std::endl;
 
 
