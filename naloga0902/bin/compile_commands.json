@@ -1,0 +1,42 @@
+[
+{
+  "directory": "/home/alex/Documents/PROII/naloga0902/bin",
+  "command": "/usr/bin/c++  -I/home/alex/Documents/PROII/naloga0902/include -pedantic-errors -Wall -Wextra -Weffc++ -std=gnu++2a -o CMakeFiles/main.dir/src/Board.cpp.o -c /home/alex/Documents/PROII/naloga0902/src/Board.cpp",
+  "file": "/home/alex/Documents/PROII/naloga0902/src/Board.cpp"
+},
+{
+  "directory": "/home/alex/Documents/PROII/naloga0902/bin",
+  "command": "/usr/bin/c++  -I/home/alex/Documents/PROII/naloga0902/include -pedantic-errors -Wall -Wextra -Weffc++ -std=gnu++2a -o CMakeFiles/main.dir/src/Date.cpp.o -c /home/alex/Documents/PROII/naloga0902/src/Date.cpp",
+  "file": "/home/alex/Documents/PROII/naloga0902/src/Date.cpp"
+},
+{
+  "directory": "/home/alex/Documents/PROII/naloga0902/bin",
+  "command": "/usr/bin/c++  -I/home/alex/Documents/PROII/naloga0902/include -pedantic-errors -Wall -Wextra -Weffc++ -std=gnu++2a -o CMakeFiles/main.dir/src/DateTime.cpp.o -c /home/alex/Documents/PROII/naloga0902/src/DateTime.cpp",
+  "file": "/home/alex/Documents/PROII/naloga0902/src/DateTime.cpp"
+},
+{
+  "directory": "/home/alex/Documents/PROII/naloga0902/bin",
+  "command": "/usr/bin/c++  -I/home/alex/Documents/PROII/naloga0902/include -pedantic-errors -Wall -Wextra -Weffc++ -std=gnu++2a -o CMakeFiles/main.dir/src/ExpirationTask.cpp.o -c /home/alex/Documents/PROII/naloga0902/src/ExpirationTask.cpp",
+  "file": "/home/alex/Documents/PROII/naloga0902/src/ExpirationTask.cpp"
+},
+{
+  "directory": "/home/alex/Documents/PROII/naloga0902/bin",
+  "command": "/usr/bin/c++  -I/home/alex/Documents/PROII/naloga0902/include -pedantic-errors -Wall -Wextra -Weffc++ -std=gnu++2a -o CMakeFiles/main.dir/src/LocationTask.cpp.o -c /home/alex/Documents/PROII/naloga0902/src/LocationTask.cpp",
+  "file": "/home/alex/Documents/PROII/naloga0902/src/LocationTask.cpp"
+},
+{
+  "directory": "/home/alex/Documents/PROII/naloga0902/bin",
+  "command": "/usr/bin/c++  -I/home/alex/Documents/PROII/naloga0902/include -pedantic-errors -Wall -Wextra -Weffc++ -std=gnu++2a -o CMakeFiles/main.dir/src/Task.cpp.o -c /home/alex/Documents/PROII/naloga0902/src/Task.cpp",
+  "file": "/home/alex/Documents/PROII/naloga0902/src/Task.cpp"
+},
+{
+  "directory": "/home/alex/Documents/PROII/naloga0902/bin",
+  "command": "/usr/bin/c++  -I/home/alex/Documents/PROII/naloga0902/include -pedantic-errors -Wall -Wextra -Weffc++ -std=gnu++2a -o CMakeFiles/main.dir/src/Time.cpp.o -c /home/alex/Documents/PROII/naloga0902/src/Time.cpp",
+  "file": "/home/alex/Documents/PROII/naloga0902/src/Time.cpp"
+},
+{
+  "directory": "/home/alex/Documents/PROII/naloga0902/bin",
+  "command": "/usr/bin/c++  -I/home/alex/Documents/PROII/naloga0902/include -pedantic-errors -Wall -Wextra -Weffc++ -std=gnu++2a -o CMakeFiles/main.dir/src/main.cpp.o -c /home/alex/Documents/PROII/naloga0902/src/main.cpp",
+  "file": "/home/alex/Documents/PROII/naloga0902/src/main.cpp"
+}
+]
